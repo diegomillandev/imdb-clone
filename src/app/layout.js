@@ -1,5 +1,6 @@
 import { HeaderPage } from "@/components";
 import "./globals.css";
+import Providers from "./Providers";
 
 export const metadata = {
   title: "IMDB Clone",
@@ -9,10 +10,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-gray-800">
-        <HeaderPage />
-        {children}
-      </body>
+        <body>
+            <Providers>
+                <HeaderPage />
+                {children}
+            </Providers>
+        </body>
     </html>
   );
 }
